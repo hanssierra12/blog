@@ -1,0 +1,36 @@
+---
+import Navbar from '@/component/Navbar.astro';
+interface Props {
+	title: string;
+}
+
+const { title }: Props = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='description' content='Astro description' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='generator' content={Astro.generator} />
+		<title>{title}</title>
+		<link
+			href='https://fonts.googleapis.com/icon?family=Material+Icons'
+			rel='stylesheet'
+		/>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+			body {
+				font-family: 'Manrope';
+			}
+		</style>
+	</head>
+	<body class='bg-design-black-90 w-full'>
+		<Navbar />
+		<main class='w-full max-w-[1440px] m-auto px-4'>
+			<slot />
+		</main>
+	</body>
+</html>

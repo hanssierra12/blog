@@ -1,0 +1,62 @@
+---
+import Layout from '@layout/Layout.astro';
+import profile from '@/image/profile-design.png';
+import Projects from '@/component/Projects.astro';
+import resume from '@/hv/Hans Sierra CV Resume.pdf';
+---
+
+<Layout title='Portfolio Design Hans Sierra'>
+	<section
+		class='flex flex-col-reverse justify-center gap-5 lg:flex-row lg:justify-between items-center w-full max-w-[1350px] mb-10 lg:mb-56'
+	>
+		<div
+			class='w-full max-w-[650px] flex flex-col justify-center items-center lg:items-start'
+		>
+			<h1
+				class='text-4xl md:text-6xl font-bold md:leading-[60px] tracking-tighter text-design-white-80 mb-6'
+			>
+				Hi, I am Hans Sierra <br /> A multimedia Engineer <br /> based in Barranquilla
+			</h1>
+			<div class='w-full max-w-[500px] mb-7 text-center lg:text-start'>
+				<p
+					class='text-lg md:text-2xl text-design-black-60 font-semibold tracking-tighter md:leading-9'
+				>
+					I provide UI/UX and graphic design services for businesses.
+				</p>
+			</div>
+			<div
+				class='flex flex-col-reverse md:flex-row justify-center items-center gap-4 w-full lg:justify-start'
+			>
+				<a
+					href='mailto:hi@yourname.com'
+					class='w-full bg-design-black-50 max-w-[300px] flex justify-center items-center gap-2 py-2 rounded-md cursor-pointer'
+				>
+					<span class='material-icons text-white text-2xl'>
+						mail</span
+					>
+					<span class='text-base md:text-lg text-white font-semibold'
+						>hanssierra269@gmail.com</span
+					>
+				</a>
+				<a
+					href={resume}
+					target='_blank'
+					class='w-full bg-design-black-50 max-w-[300px] md:max-w-[200px] flex justify-center items-center gap-2 py-2 rounded-md cursor-pointer'
+				>
+					<span class='material-icons text-white text-2xl'>
+						download</span
+					>
+					<span class='text-base md:text-lg text-white font-semibold'
+						>Download CV</span
+					>
+				</a>
+			</div>
+		</div>
+		<img
+			src={profile}
+			alt='profile'
+			class='w-[240px] h-[240px] md:w-[400px] md:h-[400px]'
+		/>
+	</section>
+	<Projects />
+</Layout>
